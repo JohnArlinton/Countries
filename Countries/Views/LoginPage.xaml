@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Countries.Views.LoginPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Login">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                Padding="20,50,10,20">
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    HorizontalOptions="Center"
+                    Text="Countries">
+                </Label>
+                <Image
+                    Source="green"
+                    WidthRequest="150">
+                </Image>
+                <Grid
+                    Margin="0,30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>                    
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        Grid.Row="0"
+                        Grid.Column="0"
+                        Text="E-mail">  
+                    </Label>
+                    <Entry
+                        Grid.Row="0"
+                        Grid.Column="1"                    
+                        Keyboard="Email"
+                        Placeholder="Enter your e-mail">
+                    </Entry>
+                    <Label 
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Text="Password">
+                    </Label>
+                    <Entry
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        IsPassword="true"
+                        Placeholder="Enter your password">
+                    </Entry>
+                </Grid>
+                <ActivityIndicator>
+                </ActivityIndicator>
+                <StackLayout
+                    Orientation="Horizontal">
+                    <Label
+                        HorizontalOptions="StartAndExpand"
+                        Text="Rememberme on this device"
+                        VerticalOptions="Center">
+                    </Label>
+                    <Switch
+                        HorizontalOptions="End">
+                    </Switch>
+                </StackLayout>
+                <Label
+                    HorizontalOptions="Center"
+                    Text="Forgot your password?"
+                    TextColor="Blue"
+                    VerticalOptions="CenterAndExpand">
+                </Label>
+                <StackLayout
+                    Margin="50,0">
+                    <Button 
+                        BackgroundColor="Navy"
+                        BorderRadius="20"
+                        HeightRequest="40"
+                        Text="Login"
+                        TextColor="White">
+                    </Button>
+                    <Button 
+                        BackgroundColor="Purple"
+                        BorderRadius="20"
+                        HeightRequest="40"
+                        Text="Register"
+                        TextColor="White">
+                    </Button>
+                </StackLayout>
+                <StackLayout
+                    HorizontalOptions="Center"
+                    Orientation="Horizontal">
+                    <Image
+                        Source="facebook_logo"
+                        WidthRequest="80">
+                    </Image>
+                    <Image
+                        Source="twitter_logo"
+                        WidthRequest="70">
+                    </Image>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
