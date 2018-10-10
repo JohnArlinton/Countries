@@ -86,6 +86,10 @@
     <AndroidResource Include="Resources\drawable\green.png" />
     <AndroidResource Include="Resources\drawable\facebook_logo.png" />
     <AndroidResource Include="Resources\drawable\twitter_logo.png" />
+    <AndroidResource Include="Resources\drawable\bitcoin.png" />
+    <AndroidResource Include="Resources\drawable\facebook.png" />
+    <AndroidResource Include="Resources\drawable\twitter.png" />
+    <AndroidResource Include="Resources\drawable\instagram.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />
