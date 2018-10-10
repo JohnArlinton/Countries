@@ -5,7 +5,8 @@
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
              Title="CountryCoins">
     <ContentPage.Content>
-        <ScrollView>
+        <ScrollView
+            BindingContext="{Binding Login}">
             <StackLayout
                 Padding="10">
                 <Image
@@ -31,6 +32,7 @@
                         Grid.Column="1"                    
                         Keyboard="Email"
                         Margin="10,0"
+                        Text="{Binding Email, Mode=TwoWay}"
                         Placeholder="Enter your e-mail">
                     </Entry>
                     <Label 
@@ -45,10 +47,12 @@
                         Grid.Column="1"
                         IsPassword="true"
                         Margin="10,0"
+                        Text="{Binding Password, Mode=TwoWay}"
                         Placeholder="Enter your password">
                     </Entry>
                 </Grid>
-                <ActivityIndicator>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning, Mode=TwoWay}">
                 </ActivityIndicator>
                 <StackLayout
                     Orientation="Horizontal">
@@ -56,12 +60,12 @@
                         FontSize="Small"
                         HorizontalOptions="StartAndExpand"
                         Margin="10,0"
-                        Text="Rememberme on this device"
+                        Text="Remember me on this device"
                         VerticalOptions="CenterAndExpand">
                     </Label>
                     <Switch
-                        HorizontalOptions="End"
-                        Margin="10,0">
+                        IsToggled="{Binding IsRemember, Mode=TwoWay}"
+                        HorizontalOptions="End">
                     </Switch>
                 </StackLayout>
                 <Label
@@ -77,6 +81,7 @@
                     <Button 
                         BackgroundColor="Green"
                         BorderRadius="21"
+                        Command="{Binding LoginCommand}"
                         FontAttributes="Bold"
                         HeightRequest="42"
                         HorizontalOptions="FillAndExpand"
@@ -87,6 +92,7 @@
                     <Button 
                         BackgroundColor="Green"
                         BorderRadius="21"
+                        Command="{Binding RegisterCommand}"
                         FontAttributes="Bold"
                         HeightRequest="42"
                         HorizontalOptions="FillAndExpand"
